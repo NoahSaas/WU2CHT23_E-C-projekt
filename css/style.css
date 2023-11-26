@@ -1,0 +1,46 @@
+* {
+    background-color: aqua;
+}
+
+#wrapper {
+    background-color: green;
+    height: 100vh;
+    width: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 75px 1fr 1fr 1fr 1fr 1fr;
+    grid-template:
+    
+    "header header header"
+    "nav nav nav"
+    "aside ar1 ar1"
+    "aside ar1 ar1"
+    "aside ar2 ar2"
+    "aside ar2 ar2"
+    "aside ar3 ar3"
+    ;
+}
+
+header {
+    background-color: black;
+}
+
+nav {
+    background-color: brown;
+}
+
+#ar1 {
+    background-color: red;
+}
+
+#ar2 {
+    background-color: green;
+}
+
+#ar3 {
+    background-color: blue;
+}
+
+aside {
+    background-color: chartreuse;
+}
