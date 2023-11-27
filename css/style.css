@@ -1,5 +1,9 @@
 * {
-    background-color: aqua;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
 }
 
 #wrapper {
@@ -7,40 +11,59 @@
     height: 100vh;
     width: auto;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 75px 1fr 1fr 1fr 1fr 1fr;
-    grid-template:
-    
-    "header header header"
-    "nav nav nav"
-    "aside ar1 ar1"
-    "aside ar1 ar1"
-    "aside ar2 ar2"
-    "aside ar2 ar2"
-    "aside ar3 ar3"
-    ;
+    grid-template-columns: minmax(150px, 1fr) minmax(150px, 1fr) minmax(150px, 1fr);
+    grid-template-rows: minmax(100px, 1fr) 75px minmax(100px, 1fr) minmax(100px, 1fr) minmax(100px, 1fr) minmax(100px, 1fr) minmax(100px, 1fr) minmax(100px, 1fr);
+    grid-template-areas:
+        "header header header"
+        "nav nav nav"
+        "ar1 ar1 aside"
+        "ar1 ar1 aside"
+        "ar2 ar2 aside"
+        "ar2 ar2 aside"
+        "ar3 ar3 aside"
+        "ar3 ar3 aside";
 }
 
 header {
     background-color: black;
+    grid-area: header;
 }
 
 nav {
     background-color: brown;
+    grid-area: nav;
 }
 
 #ar1 {
     background-color: red;
+    grid-area: ar1;
 }
 
 #ar2 {
     background-color: green;
+    grid-area: ar2;
 }
 
 #ar3 {
     background-color: blue;
+    grid-area: ar3;
 }
 
 aside {
     background-color: chartreuse;
+    grid-area: aside;
+}
+
+ul {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+}
+
+a {
+    font-size: 50px;
+    text-decoration: none;
+    color: rgb(194, 194, 194);
 }
