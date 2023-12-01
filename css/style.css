@@ -4,14 +4,14 @@
 
 body {
     margin: 0;
+    background-color: #2980b9;
 }
 
 #wrapper {
-    background-color: green;
     height: 100vh;
     width: auto;
     display: grid;
-    grid-template-columns: minmax(150px, 1fr) minmax(150px, 1fr) minmax(150px, 1fr);
+    grid-template-columns: minmax(150px, 1fr) minmax(150px, 1fr) minmax(150px, 0.75fr);
     grid-template-rows: minmax(100px, 1fr) 75px minmax(100px, 1fr) minmax(100px, 1fr) minmax(100px, 1fr) minmax(100px, 1fr) minmax(100px, 1fr) minmax(100px, 1fr);
     grid-template-areas:
         "header header header"
@@ -25,13 +25,27 @@ body {
 }
 
 header {
-    background-color: black;
     grid-area: header;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center; 
+}
+
+h1 {
+    font-size: 80px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight:bolder;
 }
 
 nav {
-    background-color: brown;
+    background-color: rgb(191, 183, 183);
     grid-area: nav;
+}
+
+article {
+    display: flex;
+    align-items: center;
+    margin: 5px;
 }
 
 #ar1 {
@@ -52,6 +66,7 @@ nav {
 aside {
     background-color: chartreuse;
     grid-area: aside;
+    margin: 5px;
 }
 
 ul {
@@ -59,11 +74,20 @@ ul {
     justify-content: space-evenly;
     align-items: center;
     list-style: none;
-    padding: 0;
+    
+}
+
+img {
+    margin: 15px;
+    display: flex;
+    justify-content: left;
+    max-width: 100%;
+    width: auto;
 }
 
 a {
-    font-size: 50px;
+    font-size: 40px;
+    font-family: fantasy;
     text-decoration: none;
-    color: rgb(194, 194, 194);
+    color: rgb(13, 12, 12);
 }
