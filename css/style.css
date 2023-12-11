@@ -5,9 +5,10 @@
 body {
     margin: 0;
     background-color: #2980b9;
+    height: 790px;
 }
 
-#wrapper {
+#wrapper_main {
     height: 100vh;
     width: auto;
     display: grid;
@@ -24,6 +25,53 @@ body {
         "ar3 ar3 aside";
 }
 
+#wrapper_contact {
+    display: grid;
+    grid-template-columns: minmax(150px, 1fr) minmax(150px, 1fr) minmax(150px, 1fr);
+    grid-template-rows: minmax(100px, 0.5fr) 75px minmax(100px, 2.5fr);
+    grid-template-areas:
+    "header header header"
+    "nav nav nav"
+    "c_cards c_cards c_cards"
+    ;
+}
+
+#contact_cards {
+    grid-area: c_cards;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 30px;
+    border-style: solid;
+    border-width: 3.5px;
+    background-color: rgb(191, 183, 183);
+    border-radius: 30px;
+}
+
+.info-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    border-style: solid;
+    border-width: 3.5px;
+    border-radius: 30px;
+    height: 100vh;
+    width: 100vh;
+    margin: 5vh;
+
+}
+
+.info-card img {
+    height: 40vh;
+    width: auto;
+    margin-bottom: 50px;
+}
+
+.info-card p {
+    margin-bottom: 100px;
+}
+
 header {
     grid-area: header;
     display: flex;
@@ -35,6 +83,11 @@ h1 {
     font-size: 80px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-weight:bolder;
+}
+
+h2 {
+    margin: 30px;
+    margin-bottom: 0px;
 }
 
 nav {
@@ -52,6 +105,13 @@ article {
     border-style: solid;
     background-color: rgb(191, 183, 183);
     border-radius: 15px;
+}
+
+#art_sec {
+    display: flex;
+    flex-direction: column;
+
+    align-items: flex-start;
 }
 
 #ar1 {
@@ -89,12 +149,12 @@ img {
     display: flex;
     justify-content: left;
     height: 75%;
-    width: auto;
+    width: 130px;
     border-radius: 15px;
     border-style: solid;
 }
 
-img:hover {
+#wrapper_main img:hover {
     background-color: rgb(161, 151, 151);
     border-radius: 30px;
     filter: brightness(60%);
@@ -123,15 +183,12 @@ a:hover {
 
 p {
     margin: 30px;
+    margin-top: 15px;
 }
 
-p:hover {
+#wrapper_main p:hover {
     background-color: rgb(161, 151, 151);
     border-radius: 10px;
     padding: 5px;
 }
 
-#r {
-    height: 100vh;
-    width: auto;
-}
