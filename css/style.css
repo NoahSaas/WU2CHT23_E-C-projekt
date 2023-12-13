@@ -85,7 +85,7 @@ h1 {
     font-weight:bolder;
 }
 
-h2 {
+#art_sec h2 {
     margin: 30px;
     margin-bottom: 0px;
 }
@@ -110,7 +110,6 @@ article {
 #art_sec {
     display: flex;
     flex-direction: column;
-
     align-items: flex-start;
 }
 
@@ -126,9 +125,15 @@ article {
     grid-area: ar3;
 }
 
+#ad_pic {
+    height: 100%;
+    width: 100%;
+    margin: 0px;
+}
+
 aside {
     border-style: solid;
-    border-radius: 15px;
+    border-radius: 18px;
     background-color: rgb(191, 183, 183);
     grid-area: aside;
     margin: 15px;
@@ -154,7 +159,7 @@ img {
     border-style: solid;
 }
 
-#wrapper_main img:hover {
+.art_pics:hover {
     background-color: rgb(161, 151, 151);
     border-radius: 30px;
     filter: brightness(60%);
