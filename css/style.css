@@ -44,11 +44,12 @@ body {
     margin: 30px;
     border-style: solid;
     border-width: 3.5px;
-    background-color: rgb(191, 183, 183);
+    background-color: rgb(191, 184, 183);
     border-radius: 30px;
 }
 
 .info-card {
+    background-color: #483C32;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -65,12 +66,8 @@ body {
 .info-card img {
     height: 40vh;
     width: auto;
-    margin-bottom: 50px;
 }
 
-.info-card p {
-    margin-bottom: 100px;
-}
 
 header {
     grid-area: header;
@@ -86,12 +83,13 @@ h1 {
 }
 
 #art_sec h2 {
+    font-size: 50px;
     margin: 30px;
     margin-bottom: 0px;
 }
 
 nav {
-    background-color: rgb(191, 183, 183);
+    background-color: #483C32;
     border-style: solid;
     grid-area: nav;
 }
@@ -134,7 +132,7 @@ article {
 aside {
     border-style: solid;
     border-radius: 18px;
-    background-color: rgb(191, 183, 183);
+    background-color: rgb(191, 184, 183);
     grid-area: aside;
     margin: 15px;
     margin-bottom: 0px;
@@ -145,7 +143,25 @@ ul {
     justify-content: space-evenly;
     align-items: center;
     list-style: none;
-    
+}
+
+.info-card ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    list-style: none;
+}
+
+.info-card ul #title {
+    text-decoration: underline;
+    color: rgb(0, 0, 0);
+}
+
+.info-card p {
+    color: wheat;
+    font-weight: bolder;
+    font-size: 30px;
 }
 
 img {
@@ -186,9 +202,10 @@ a:hover {
     border-radius: 10px;
 }
 
-p {
+#art_sec p {
     margin: 30px;
     margin-top: 15px;
+    font-size: 20px;
 }
 
 #wrapper_main p:hover {
