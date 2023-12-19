@@ -28,13 +28,27 @@ body {
 #wrapper_contact {
     display: grid;
     grid-template-columns: minmax(150px, 1fr) minmax(150px, 1fr) minmax(150px, 1fr);
-    grid-template-rows: minmax(100px, 0.5fr) 75px minmax(100px, 2.5fr);
+    grid-template-rows: minmax(100px, 0.25fr) 75px minmax(100px, 2.5fr);
     grid-template-areas:
     "header header header"
     "nav nav nav"
     "c_cards c_cards c_cards"
     ;
 }
+
+#wrapper_aboutus {
+    display: grid;
+    grid-template-columns: minmax(150px, 1fr) minmax(150px, 1fr);
+    grid-template-rows: minmax(100px, 0.25fr) 75px minmax(150px, 1fr) minmax(150px, 1fr) minmax(150px, 100vh);
+    grid-template-areas:
+    "header header"
+    "nav nav"
+    "abttitle abttitle"
+    "abt abt"
+    "pplbox pplbox"
+    ;
+}
+
 
 #contact_cards {
     grid-area: c_cards;
@@ -57,15 +71,16 @@ body {
     border-style: solid;
     border-width: 3.5px;
     border-radius: 30px;
-    height: 100vh;
-    width: 100vh;
+    height: 0.9fr;
+    width: 325px;
     margin: 5vh;
 
 }
 
 .info-card img {
     height: 40vh;
-    width: auto;
+    width: 40vh;
+    margin: 25px;
 }
 
 
@@ -129,6 +144,21 @@ article {
     margin: 0px;
 }
 
+#abouttext {
+    grid-area: abt;
+    background-color: pink;
+}
+
+#aboutustitle {
+    grid-area: abttitle;
+    background-color: red;
+}
+
+#peoplebox {
+    grid-area: pplbox;
+    background-color: yellow;
+}
+
 aside {
     border-style: solid;
     border-radius: 18px;
@@ -154,6 +184,7 @@ ul {
 }
 
 .info-card ul #title {
+    font-size: 30px;
     text-decoration: underline;
     color: rgb(0, 0, 0);
 }
@@ -161,7 +192,7 @@ ul {
 .info-card p {
     color: wheat;
     font-weight: bolder;
-    font-size: 30px;
+    font-size: 20px;
 }
 
 img {
